@@ -55,7 +55,7 @@ class model():
             df = df.drop(['Claimed','insurance_claim','claim_amount'], axis = 1)
             # to preserve the code we've created in the previous section, we will add a column with 'NaN' strings
             
-            # create a separate dataframe, containing dummy values for ALL avaiable reasons
+            #convert categorical variables to dummy variables   
             df = pd.get_dummies(df)
           
             columns = ['age','bmi','children','steps']
@@ -89,7 +89,7 @@ class model():
                 return self.preprocessed_data
 
 
-# In[ ]:
+
 
 
 
